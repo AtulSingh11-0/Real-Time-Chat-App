@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <!-- Bootstrap icon CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <title>{% block title %}Django Auth Tutorial{% endblock %}</title>
+  </head>
+
+  <style>
+          body {
+            background-color: #0d5561;
+          }
+          .box,
+          .sidebar {
+            font-family: "Poppins", sans-serif;
+            background-image: linear-gradient(
+              to bottom,
+              #041226,
+              #081629,
+              #0b192d,
+              #0e1d30,
+              #122034,
+              #152337,
+              #18263a,
+              #1b293d,
+              #1e2c40,
+              #223044,
+              #253347,
+              #29374b
+            );
+          }
+          .box {
+            height: 98vh;
+          }
+          .chat-message {
+            margin: 2px 0px;
+            padding: 10px 10px;
+            width: auto;
+            position: aboslute;
+            font-size: 1.5em;
+          }
+          .text-left{
+            flex: 1;
+            float: left;
+          }
+          .text-right{
+            float: right;
+          }
+          .card{
+            max-width: initial;
+          }
+          .card-block{
+            padding: 28px 20px;
+          }
+          .jumbotron{
+            color: white;
+            background-color: black;
+            display: flex;
+            flex-direction: column;
+            max-height: 50vw;
+            background-color: #0d5561;
+          }
+
+          .sendbtnBox{
+            display:flex;
+            align-items: center;
+            justify-content:center
+          }
+
+          .sendBtn{
+            width:10%;
+            margin-left:20px;
+
+          }
+  </style>
+
+  <body>
+    {% comment %} {% block header%} {% if user.username != None %}
+    <div class="alert alert-danger" role="alert">
+      
+      Hi <b>{{ user.username }}</b>, Welcome to Chatapp
+    </div>
+    <br />
+    {% else %}
+    <div class="alert alert-danger" role="alert">Hi Welcome to Chatapp</div>
+    <br />
+
+    {% endif %} {% endblock %} {% endcomment %}
+
+    <main>{% block content %} {% endblock %}</main>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,4 @@
+my_env
+db.sqlite3
+__pycache__
+frontEnd/

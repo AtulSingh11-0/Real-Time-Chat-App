@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+html,body{
+  display: grid;
+  height: 100%;
+  width: 100%;
+  place-items: center;
+  /* background: -webkit-linear-gradient(left, #0d3f6a, #0c3db9); */
+  background-image: linear-gradient(
+          to bottom,
+          #041226,
+          #081629,
+          #0b192d,
+          #0e1d30,
+          #122034,
+          #152337,
+          #18263a,
+          #1b293d,
+          #1e2c40,
+          #223044,
+          #253347,
+          #29374b
+        );
+          background-image: url(../img/bg2.jpg);
+
+}
+::selection{
+  background: #429bfa;
+  color: #fff;
+}
+.wrapper{
+  overflow: hidden;
+  max-width: 400px;
+  background: #ffffff4d;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
+  width: 50%;
+  height: 400px;
+  backdrop-filter: (100px);
+}
+.wrapper .title-text{
+  display: flex;
+  width: 200%;
+}
+.wrapper .title{
+  color: #fff;
+  width: 50%;
+  font-size: 35px;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+#login:checked ~ label.signup{
+  color: #ffffff;
+}
+#login:checked ~ label.login{
+  cursor: default;
+  user-select: none;
+}
+.wrapper .form-container{
+  width: 100%;
+  overflow: hidden;
+}
+.form-container .form-inner{
+  display: flex;
+  width: 200%;
+}
+.form-container .form-inner form{
+  width: 50%;
+  transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+.form-inner form .field{
+  height: 50px;
+  width: 100%;
+  margin-top: 32px;
+}
+.form-inner form .field input{
+  color: white;
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding-left: 15px;
+  border-radius: 20px;
+  border: 1px solid lightgrey;
+  border-bottom-width: 2px;
+  font-size: 17px;
+  transition: all 0.3s ease;
+  background-color: #212f42b0;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.form-inner form .field input:focus{
+  border-color: #4e5fcd;
+  /* box-shadow: inset 0 0 3px #fb6aae; */
+}
+.form-inner form .field input::placeholder{
+  color: #fff;
+  transition: all 0.3s ease;
+}
+form .field input:focus::placeholder{
+  color: #ffffff;
+}
+form .btn{
+  height: 50px;
+  width: 100%;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid white;
+}
+form .btn:hover{
+  background-color: #04122684;
+  transition: 0.7s ease;
+}
+form .btn .btn-layer{
+  height: 100%;
+  width: 300%;
+  position: absolute;
+  left: -100%;
+  border-radius: 5px;
+  transition: all 0.4s ease;;
+}
+form .btn:hover .btn-layer{
+  left: 0;
+}
+form .btn input[type="submit"]{
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  position: relative;
+  background: #0e2a86a6;
+  border: none;
+  color: #fff;
+  padding-left: 0;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
