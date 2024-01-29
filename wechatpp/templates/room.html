@@ -19,12 +19,14 @@
 
   <div class="container">
     <div class="row d-flex justify-content-center">
-        <div class="col-12" style="background-color:#d1ecf1;">
-            <div class="alert alert-info d-flex justify-content-between" role="alert">
-              <button type="button" class="btn btn-light"><a href="https://atulsingh11-0.github.io/Peer-2-Peer-VC/lobby.html"><i class="bi bi-camera-video-fill" style="font-size: 1.5rem;"></i></a></button>
+        <div class="col-12 chat-box">
+            <div class="alert d-flex justify-content-between" style="color: white; background-color: #041226;" role="alert">
+              <a href="https://atulsingh11-0.github.io/Peer-2-Peer-VC/lobby.html"><i class="bi bi-camera-video-fill" style="font-size: 2rem; color: white;"></i></a>
+              <!-- <button type="button" class="btn btn-light"><a href="https://atulsingh11-0.github.io/Peer-2-Peer-VC/lobby.html"><i class="bi bi-camera-video-fill" style="font-size: 1.5rem;"></i></a></button> -->
               <h5 style="margin-top: 20px;"> ROOM :- {{room_name}}</h5>
             
-                <button type="button" class="btn btn-light"><a href="/accounts/login/"><i class="bi bi-door-open-fill" style="font-size: 1.5rem;"></i></a></button>
+                <a href="/accounts/login/"><i class="bi bi-door-open-fill" style="font-size: 2rem;color: white;"></i></a>
+                <!-- <button type="button" class="btn btn-light"><a href="/accounts/login/"><i class="bi bi-door-open-fill" style="font-size: 1.5rem;"></i></a></button> -->
               
             </div>
             <form>
@@ -44,7 +46,7 @@
                   </div>
                   {% else %}
                   <div class="jumbotron" id="chatbox" style="padding: 4px 2px;"></div>
-                  <b>No Messages in this Room.</b>
+                  <b style="color: white;">No Messages in this Room.</b>
                     {% endif %}
 
                 </div>

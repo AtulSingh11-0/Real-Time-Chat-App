@@ -23,12 +23,48 @@
 
   <style>
           body {
-            background-color: #0d5561;
+            background-color: #223044; 
+            background-image: url('https://e1.pxfuel.com/desktop-wallpaper/551/14/desktop-wallpaper-whatsapp-music-by-lemacsp-popular-music.jpg');
+            /* background-repeat: no-repeat;
+            background-size: cover; */
           }
-          .box,
-          .sidebar {
-            font-family: "Poppins", sans-serif;
-            background-image: linear-gradient(
+          .chat-box {
+            border-radius: 1em;
+            background-color: #041226; 
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+          }
+          .chat-message {
+            margin-inline: 2.5rem;
+            margin-bottom: 2rem;
+            padding: .75em 1.125em;
+            width: auto;
+            position: sticky;
+            font-size: 1.5em;
+            box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+            background: #374151a8;
+          }
+          .text-left{
+            float: left;
+            border-radius: .7em .7em .7em 0;
+          }
+          .text-right{
+            float: right;
+            border-radius: .7em .7em 0 .7em;
+          }
+          .card{
+            max-width: initial;
+          }
+          .card-block{
+            padding: 28px 20px;
+          }
+          .jumbotron{
+            color: white;
+            display: flex;
+            flex-direction: column;
+            min-height: 25vw;
+            max-height: 40vw;
+            border-radius: 1em;
+            background-image: linear-gradient( 
               to bottom,
               #041226,
               #081629,
@@ -44,48 +80,14 @@
               #29374b
             );
           }
-          .box {
-            height: 98vh;
-          }
-          .chat-message {
-            margin: 2px 0px;
-            padding: 10px 10px;
-            width: auto;
-            position: aboslute;
-            font-size: 1.5em;
-          }
-          .text-left{
-            flex: 1;
-            float: left;
-          }
-          .text-right{
-            float: right;
-          }
-          .card{
-            max-width: initial;
-          }
-          .card-block{
-            padding: 28px 20px;
-          }
-          .jumbotron{
-            color: white;
-            background-color: black;
-            display: flex;
-            flex-direction: column;
-            max-height: 50vw;
-            background-color: #0d5561;
-          }
-
           .sendbtnBox{
             display:flex;
             align-items: center;
             justify-content:center
           }
-
           .sendBtn{
             width:10%;
             margin-left:20px;
-
           }
   </style>
 
