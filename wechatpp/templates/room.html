@@ -10,7 +10,7 @@
 {% block content %}
 {% if user.is_authenticated %}
 
-  <div class="alert alert-danger" role="alert">
+  <div class="nav-bar alert alert-danger" role="alert">
     <i class="bi bi-chat-dots-fill" style="font-size: 1.125em; padding: 10px; "></i>
     Hi <b>{{ user.username }}</b>, Welcome to Chatapp
   </div>
@@ -20,20 +20,21 @@
   <div class="container">
     <div class="row d-flex justify-content-center">
         <div class="col-12 chat-box">
-            <div class="alert d-flex justify-content-between" style="color: white; background-color: #041226;" role="alert">
-              <a href="https://atulsingh11-0.github.io/Peer-2-Peer-VC/lobby.html"><i class="bi bi-camera-video-fill" style="font-size: 2rem; color: white;"></i></a>
-              <!-- <button type="button" class="btn btn-light"><a href="https://atulsingh11-0.github.io/Peer-2-Peer-VC/lobby.html"><i class="bi bi-camera-video-fill" style="font-size: 1.5rem;"></i></a></button> -->
-              <h5 style="margin-top: 20px;"> ROOM :- {{room_name}}</h5>
-            
-                <a href="/accounts/login/"><i class="bi bi-door-open-fill" style="font-size: 2rem;color: white;"></i></a>
-                <!-- <button type="button" class="btn btn-light"><a href="/accounts/login/"><i class="bi bi-door-open-fill" style="font-size: 1.5rem;"></i></a></button> -->
+            <div class="alert d-flex justify-content-between text-white" role="alert">
+              <a href="https://atulsingh11-0.github.io/Peer-2-Peer-VC/lobby.html">
+                <i class="bi bi-camera-video-fill"></i>
+              </a>
               
+              <h4> ROOM :- {{room_name}}</h4>
+              
+              <a href="/accounts/login/">
+                <i class="bi bi-door-open-fill"></i>
+              </a>
             </div>
             <form>
                 <div class="form-group">
                   {% if messages %}
-                  <div class="jumbotron" id="chatbox" style="padding: 4px 2px;max-height: 300px;  /* Adjust the max-height as needed */
-                  overflow-y: scroll;
+                  <div class="jumbotron" id="chatbox" style="padding: 1em 2px;max-height: 300px; overflow-y: scroll;
                 ">
                     
                       {% for message in messages %}
@@ -53,10 +54,11 @@
                 <br/>
                 <div class="form-group sendbtnBox" >
                     <input class="form-control sendInput" placeholder="Enter text here" id="my_input" type="text"  style = "width:90%; " required>
-                    <input class="btn btn-primary btn-lg  sendBtn" id="submit_button" type="button" value="Send">
+                    <!-- <input class="btn btn-primary btn-lg  sendBtn" id="submit_button" type="button" value="Send"> -->
+                    <button class="btn btn-primary btn-md sendBtn" id="submit_button">
+                      <i class="fa-solid fa-paper-plane fa-xl"></i>
+                    </button>
                 </div>
-                
-                
             </form>
         </div>
     </div>

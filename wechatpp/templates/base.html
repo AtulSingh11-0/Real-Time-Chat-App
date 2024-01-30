@@ -18,80 +18,145 @@
     <!-- Bootstrap icon CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
+    <!-- font awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <title>{% block title %}Django Auth Tutorial{% endblock %}</title>
   </head>
 
   <style>
-          body {
-            background-color: #223044; 
-            background-image: url('https://e1.pxfuel.com/desktop-wallpaper/551/14/desktop-wallpaper-whatsapp-music-by-lemacsp-popular-music.jpg');
-            /* background-repeat: no-repeat;
-            background-size: cover; */
-          }
-          .chat-box {
-            border-radius: 1em;
-            background-color: #041226; 
-            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-          }
-          .chat-message {
-            margin-inline: 2.5rem;
-            margin-bottom: 2rem;
-            padding: .75em 1.125em;
-            width: auto;
-            position: sticky;
-            font-size: 1.5em;
-            box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-            background: #374151a8;
-          }
-          .text-left{
-            float: left;
-            border-radius: .7em .7em .7em 0;
-          }
-          .text-right{
-            float: right;
-            border-radius: .7em .7em 0 .7em;
-          }
-          .card{
-            max-width: initial;
-          }
-          .card-block{
-            padding: 28px 20px;
-          }
-          .jumbotron{
-            color: white;
-            display: flex;
-            flex-direction: column;
-            min-height: 25vw;
-            max-height: 40vw;
-            border-radius: 1em;
-            background-image: linear-gradient( 
-              to bottom,
-              #041226,
-              #081629,
-              #0b192d,
-              #0e1d30,
-              #122034,
-              #152337,
-              #18263a,
-              #1b293d,
-              #1e2c40,
-              #223044,
-              #253347,
-              #29374b
-            );
-          }
-          .sendbtnBox{
-            display:flex;
-            align-items: center;
-            justify-content:center
-          }
-          .sendBtn{
-            width:10%;
-            margin-left:20px;
-          }
+    @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    .kanit-regular {
+      font-family: "Kanit", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }    
+    html, body{
+      height: 100%;
+      font-family: kanit;
+    }
+    body {
+      background-image: url('https://wallpaper.dog/large/20518677.jpg');
+      background-size: cover;
+      margin: 0; 
+      height: 100vh; 
+      background-position: center; 
+    }
+    .chat-box {
+      border-radius: 1em;
+      background-color: #0b192d;
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
+    .chat-message {
+      margin-inline: 2.5rem;
+      margin-bottom: 2rem;
+      padding: .75em 1.125em;
+      width: auto;
+      position: sticky;
+      font-size: 1.5em;
+      box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+      background: #37415182;
+    }
+    .text-left{
+      float: left;
+      border-radius: .7em .7em .7em 0;
+    }
+    .text-right{
+      float: right;
+      border-radius: .7em .7em 0 .7em;
+    }
+    .card{
+      max-width: initial;
+    }
+    .card-block{
+      padding: 28px 20px;
+    }
+    .jumbotron{
+      margin: 0;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      min-height: 25vw;
+      max-height: 40vw;
+      border-radius: 1em;
+      background-image: linear-gradient( 
+        to bottom,
+        #041226,
+        #081629,
+        #0b192d,
+        #0e1d30,
+        #122034,
+        #152337,
+        #18263a,
+        #1b293d,
+        #1e2c40,
+        #223044,
+        #253347,
+        #29374b
+      ); 
+    }
+    .sendbtnBox{
+      display:flex;
+      align-items: center;
+      justify-content:center
+    }
+    .sendBtn{
+      width:auto;
+      margin-left:20px;
+    }
+    .nav-bar{
+      color: white;
+      font-size: 1.25em;
+      background: linear-gradient(90deg, rgba(37, 203, 139, 0.69) 13%, rgba(0, 211, 253, 0.645) 53%, rgba(211, 21, 65, 0.585) 99%);
+      border: none;
+      border-radius: 0;
+    }
+    .room-bar{
+      color: white; 
+      border: none;
+      background-image: linear-gradient( 
+        to bottom,
+        #041226,
+        #081629,
+        #0b192d,
+        #0e1d30,
+        #122034,
+        #152337,
+        #18263a,
+        #1b293d,
+        #1e2c40,
+        #223044,
+        #253347,
+        #29374b
+      ); 
+    }
+    .bi {
+      font-size: 2rem; 
+      color: white;
+    }
+    h4{
+      margin-top: .5em;
+    }
+    .card-block{
+      border: none;
+      color: white;
+      background-color: #0b192d;
+    }
+    @media screen and (max-width: 575px) {
+      .bi{
+        font-size: 1.5rem;
+      }
+      h4{
+        font-size: 1.3rem;
+        margin-top: 0;
+      }
+      .chat-box{
+        font-size: .75em;
+      }
+    }
   </style>
 
-  <body>
+  <body class="kanit-regular">
     {% comment %} {% block header%} {% if user.username != None %}
     <div class="alert alert-danger" role="alert">
       

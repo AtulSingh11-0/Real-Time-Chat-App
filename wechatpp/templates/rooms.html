@@ -9,17 +9,19 @@
 
 {% block content %}
 {% if user.is_authenticated %}
-<div class="alert alert-danger" role="alert">
+<div class="nav-bar alert alert-danger" role="alert">
   <i class="bi bi-chat-dots-fill" style="font-size: 1.125em; padding: 10px; "></i>
   Hi <b>{{ user.username }}</b>, Welcome to Chatapp
 </div>
 <br/>
   <div class="container">
-    <div class="alert alert-info d-flex justify-content-between" role="alert">
-      
-        <h5 style="margin-top: 10px;">Available Public Rooms</h5>
-        <button type="button" class="btn btn-light"><a href="/accounts/login/"><i class="bi bi-door-open-fill" style="font-size: 1.5rem;"></i></a></button>
-      </div>
+    <div class="room-bar alert alert-info d-flex justify-content-between" role="alert">
+      <h5 style="margin-top: 10px;">Available Public Rooms</h5>
+        
+      <a href="/accounts/login/">
+        <i class="bi bi-door-open-fill"></i>
+      </a>
+    </div>
       
       
       {% if rooms %}
@@ -27,11 +29,11 @@
             {% for room in rooms %}
             
             <div class="col-sm-4 d-flex pb-3">
-                <div class="card bg-light mb-3" style="max-width: 18rem;">
-                    <div class="card-block">
+                <div class="card bg-light mb-3 border-0" style="max-width: 18rem; border-radius: 1em;">
+                    <div class="card-block" style="border-radius: 1em;">
                         <h3 class="card-title">{{room.name}}</h3>
                         <p class="card-text">It is Public group for this Project.</p>
-                        <a href="/{{room.slug}}" class="btn btn-outline-secondary">Go to Room</a>
+                        <a href="/{{room.slug}}" class="btn btn-light">Go to Room</a>
                     </div>
                 </div>
             </div>
